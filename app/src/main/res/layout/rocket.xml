@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="202px"
+    android:id="@+id/rocket_layout">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:textColor="#ff0000"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:paddingLeft="110px"
+        android:layout_marginLeft="220px"
+        android:background="@drawable/shape1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赠送给你1个火箭"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/name"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:paddingRight="150px"
+        android:textColor="#a0000000"
+        android:background="@drawable/shape2"
+        />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/rocket_gif"
+        android:layout_width="323px"
+        android:layout_height="202px"
+        fresco:placeholderImage="@drawable/rocket" />
+</RelativeLayout>

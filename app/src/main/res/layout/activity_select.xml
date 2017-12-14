@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/beijing"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.a45773.Main.Select"
+   >
+
+
+    <ImageView
+        android:id="@+id/fanhuicq"
+        android:layout_width="72dp"
+        android:layout_height="27dp"
+        android:background="@drawable/selector_bg3"
+        android:layout_marginTop="10dp"
+        android:onClick="fanhuicq"
+        />
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抽取观众"
+            android:textSize="20dp"
+
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fac400"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fac400"
+            android:text="123"
+            android:textSize="25dp"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="239dp"
+        android:layout_below="@+id/chronometer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"></RelativeLayout>
+
+    <Chronometer
+        android:id ="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="%s"
+        android:textSize="100dp"
+        android:textColor="#00FF00"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="开始抽取"
+        android:textSize="25dp"
+        android:id="@+id/start"
+        android:background="@drawable/ripple_bg3"
+        android:onClick="start"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#009dff"/>
+</RelativeLayout>

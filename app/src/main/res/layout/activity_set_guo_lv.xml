@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_set_guo_lv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.a45773.Main.SetGuoLV">
+
+
+    <ImageView
+        android:id="@+id/fanhuigl"
+        android:layout_width="72dp"
+        android:layout_height="27dp"
+        android:background="@drawable/selector_bg3"
+        android:layout_marginTop="10dp"
+        android:onClick="fanhuigl"
+        />
+
+    <RelativeLayout
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_bg3"
+        android:layout_below="@+id/gift"
+        android:layout_marginTop="20dp"
+        android:onClick="black"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="黑名单"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/top3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ripple_bg3"
+        android:layout_below="@+id/top2"
+        android:layout_marginTop="20dp"
+        android:onClick="mg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="自定义敏感词"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/top1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#28000000"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/top"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="过滤"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/t"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="28dp"
+            android:text="已开启"
+            android:textSize="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/selector_bg4"
+            android:onClick="turn"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="过滤设置"
+            android:textSize="20dp"
+
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/top3"
+        android:background="#28000000"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/glpb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#28000000"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/top1"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="关联屏蔽"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="28dp"
+            android:text="已开启"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/selector_bg4"
+            android:id="@+id/glpb_boutton"
+            android:onClick="glpb"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gift"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#28000000"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/glpb"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="只显示礼物"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="28dp"
+            android:text="已开启"
+            android:textSize="20dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/selector_bg4"
+            android:id="@+id/gift_boutton"
+            android:onClick="gift"
+            />
+    </RelativeLayout>
+</RelativeLayout>
