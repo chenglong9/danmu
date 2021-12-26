@@ -156,12 +156,12 @@ public class MainActivity extends Activity implements OnItemClickListener, OnDis
     public Handler handler = new Handler() {
         public void handleMessage(Message message) {
 
-            if (((Msgbean) message.obj).getType().equals("chatmsg"))
+            if ("chatmsg".equals(((Msgbean) message.obj).getType()))
                 if (guolv((Msgbean) message.obj) == true) {
                     if (set.getGift()==0)
                     ad.add((Msgbean) message.obj);
                 }
-            if (((Msgbean) message.obj).getType().equals("dgb")) {
+            if ("dgb".equals(((Msgbean) message.obj).getType())) {
                 if (set.getLiwu() == 1)
                     ad.add((Msgbean) message.obj);
             }
@@ -178,11 +178,8 @@ public class MainActivity extends Activity implements OnItemClickListener, OnDis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //状态栏 @ 顶部
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //A //导航栏 @ 底部
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        //B //这个加在哪个布局，该布局就会相应的向上（配置A）或者向下（配置B）或者向上下（同时配置AB）扩展
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//不息屏
         setContentView(R.layout.activity_main);
 
@@ -255,7 +252,7 @@ public class MainActivity extends Activity implements OnItemClickListener, OnDis
 
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                String con = "选中了“" + ad.get(position).getName() + ":" + ad.get(position).getText() + "”";
+                String con = String.format("选中了“%s:%s”", ad.get(position).getName(), ad.get(position).getText());
                 name = ad.get(position).getName();
                 listal = new AlertView(con, null, "取消", null,
                         new String[]{"屏蔽该用户"},
